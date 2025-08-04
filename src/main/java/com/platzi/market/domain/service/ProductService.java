@@ -37,29 +37,6 @@ public class ProductService {
         return true;
     }).orElse(false);
     }
-/*
-    public Product update(Product product) {
-        return getProduct(product.getProductId()).map(productToUpdate -> {
-            productToUpdate.setName(product.getName());
-            productToUpdate.setCategoryId(product.getCategoryId());
-            productToUpdate.setPrice(product.getPrice());
-            productToUpdate.setStock(product.getStock());
-            productToUpdate.setActive(product.isActive());
-            return save(productToUpdate);
-        }).orElse(null);
-    }
-    */
-
-/*
-    public Product update(Product product){
-        int productId = product.getProductId();
-        Product prod = getProduct(productId).map(p -> {
-            BeanUtils.copyProperties(product,p);
-            return p;
-        }).orElseThrow(() -> new EntityNotFoundException("Product not found with ID: " + productId));
-        return productRepository.save(prod);
-    }
-*/
 
     public Product update (int productId , Product product){
 
