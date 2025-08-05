@@ -9,8 +9,8 @@ import java.util.List;
 @Table(name = "compras")
 public class Compra {
     @Id
-    @Column(name = "id_compra")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_compra")
     private Integer idCompra;
 
     @Column(name = "id_cliente")
