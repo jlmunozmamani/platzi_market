@@ -4,12 +4,11 @@ import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
-
 @Configuration
 public class SwaggerConfig {
 
-    @Bean public GroupedOpenApi api() {
+    @Bean
+    public GroupedOpenApi api() {
         return GroupedOpenApi.builder()
                 .group("market-api")
                 .packagesToScan("com.platzi.market.web.controller")
